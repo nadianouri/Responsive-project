@@ -1,0 +1,118 @@
+// colors
+
+$body-color      :#000000;
+$body-font-color : #ffff;
+$links-color     :$body-font-color;
+
+//fonts 
+$body-font:'Source Sans Pro',
+sans-serif;
+$body-font-size: 16px;
+$text-font-size: 22px;
+
+
+* {
+    box-sizing: border-box;
+    color: $body-font-color ;
+    margin    : 0px;
+    padding   : 0px;
+}
+
+body {
+    width           : 1440px;
+    max-height          : 810px;
+    margin: auto;
+    background-color: $body-color;
+}
+
+header {
+    margin-top: 69px;
+
+    nav {
+        display        : flex;
+        justify-content: space-around;
+
+        .logo {
+            font-family: 'Baloo 2', cursive;
+            font-size  : 24px;
+        }
+
+        ul {
+            display: flex;
+
+        }
+
+        li {
+            list-style-type: none;
+            margin-left    : 28px;
+
+        }
+    }
+
+    a {
+        font-family    : $body-font;
+        font-size      : $body-font-size;
+        text-decoration: none;
+        text-transform : capitalize;
+
+    }
+}
+
+.sect-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 110px;
+
+    h1 {
+        font-family:'Poppins', sans-serif;
+        font-size  : 84px;
+        line-height: 102px;
+        text-transform: capitalize;
+    }
+    p {
+        width: 573px;
+        height: 68px;
+        font-family:$body-font ;
+        font-size: $text-font-size;
+        text-align-last: center;
+        margin-top: 28px;
+    }
+    
+}
+.sect-two {
+        width:864px ;
+        height:328px;
+        margin: auto;
+
+        img {
+            padding-top: 45px;
+            
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul {
+    @media screen and (max-width: 342px) {
+        display       : flex;
+        flex-direction: column;
+
+    }
+
+}

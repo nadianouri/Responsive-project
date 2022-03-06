@@ -1,0 +1,94 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffff;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 1440px;
+  max-height: 810px;
+  margin: auto;
+  background-color: #000000;
+}
+
+header {
+  margin-top: 69px;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+header nav .logo {
+  font-family: "Baloo 2", cursive;
+  font-size: 24px;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header nav li {
+  list-style-type: none;
+  margin-left: 28px;
+}
+header a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.sect-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 110px;
+}
+.sect-one h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 84px;
+  line-height: 102px;
+  text-transform: capitalize;
+}
+.sect-one p {
+  width: 573px;
+  height: 68px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 22px;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  margin-top: 28px;
+}
+
+.sect-two {
+  width: 864px;
+  height: 328px;
+  margin: auto;
+}
+.sect-two img {
+  padding-top: 45px;
+}
+
+@media screen and (max-width: 342px) {
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
