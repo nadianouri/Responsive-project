@@ -1,6 +1,6 @@
 // colors
 
-$body-color      :#000000;
+$body-color      :#111111;
 $body-font-color : #ffff;
 $links-color     :$body-font-color;
 
@@ -13,15 +13,19 @@ $text-font-size: 22px;
 
 * {
     box-sizing: border-box;
-    color: $body-font-color ;
+    color     : $body-font-color;
     margin    : 0px;
     padding   : 0px;
+
+
 }
 
 body {
-    width           : 1440px;
-    max-height          : 810px;
-    margin: auto;
+    max-width       : 1440px;
+    width           : 100%;
+    max-height      : 810px;
+    height          : 100%;
+    margin          : auto;
     background-color: $body-color;
 }
 
@@ -35,16 +39,25 @@ header {
         .logo {
             font-family: 'Baloo 2', cursive;
             font-size  : 24px;
+
+        }
+
+        .menu-icon {
+            display: none;
+            cursor : pointer;
         }
 
         ul {
             display: flex;
-
         }
 
         li {
             list-style-type: none;
             margin-left    : 28px;
+
+            &:hover {
+                text-decoration: underline;
+            }
 
         }
     }
@@ -55,64 +68,113 @@ header {
         text-decoration: none;
         text-transform : capitalize;
 
+        &:hover {
+            color: aquamarine;
+        }
+
     }
 }
 
 .sect-one {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 110px;
+    align-items   : center;
+    margin-top    : 120px;
+
+
 
     h1 {
-        font-family:'Poppins', sans-serif;
-        font-size  : 84px;
-        line-height: 102px;
+        font-family   : 'Poppins', sans-serif;
+        font-size     : 84px;
+        line-height   : 102px;
         text-transform: capitalize;
     }
-    p {
-        width: 573px;
-        height: 68px;
-        font-family:$body-font ;
-        font-size: $text-font-size;
-        text-align-last: center;
-        margin-top: 28px;
-    }
-    
-}
-.sect-two {
-        width:864px ;
-        height:328px;
-        margin: auto;
 
-        img {
-            padding-top: 45px;
-            
+    p {
+        max-width      : 573px;
+        width          : 100%;
+        min-height     : 68px;
+        font-family    : $body-font;
+        font-size      : $text-font-size;
+        text-align-last: center;
+        margin-top     : 28px;
+
+    }
+}
+
+.sect-two {
+    display        : flex;
+    justify-content: center;
+
+    img {
+        width     : 60%;
+        max-height: 328px;
+        height    : 100%;
+        position  : fixed;
+        bottom    : 0px;
+
+    }
+
+    &:hover {
+        opacity: 0.8;
+
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    header {
+        margin-top: 19px;
+
+        nav {
+            li {
+                display: none;
+
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+    }
+
+    .sect-one {
+        margin-top: 0px;
+
+        h1 {
+            font-size: 36px;
+
         }
 
+        p {
+            width      : 217px;
+            height     : 49px;
+            font-size  : 12px;
+            line-height: 18px;
+        }
+    }
+
+    .sect-two {
+        img {
+            width     : 80%;
+            max-height: 284px;
+            position  : relative;
+            top       : 80px
+        }
+    }
 }
 
+@media screen and (max-width: 1000px) {
+    .sect-two {
 
 
+        img {
 
+            width: 75%;
+            max-height: 512px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-ul {
-    @media screen and (max-width: 342px) {
-        display       : flex;
-        flex-direction: column;
-
+        }
     }
 
 }

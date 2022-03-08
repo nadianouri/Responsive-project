@@ -7,10 +7,12 @@
 }
 
 body {
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   max-height: 810px;
+  height: 100%;
   margin: auto;
-  background-color: #000000;
+  background-color: #111111;
 }
 
 header {
@@ -27,6 +29,10 @@ header nav .logo {
   font-family: "Baloo 2", cursive;
   font-size: 24px;
 }
+header nav .menu-icon {
+  display: none;
+  cursor: pointer;
+}
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,11 +42,17 @@ header nav li {
   list-style-type: none;
   margin-left: 28px;
 }
+header nav li:hover {
+  text-decoration: underline;
+}
 header a {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   text-decoration: none;
   text-transform: capitalize;
+}
+header a:hover {
+  color: aquamarine;
 }
 
 .sect-one {
@@ -54,7 +66,7 @@ header a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 110px;
+  margin-top: 120px;
 }
 .sect-one h1 {
   font-family: "Poppins", sans-serif;
@@ -63,8 +75,9 @@ header a {
   text-transform: capitalize;
 }
 .sect-one p {
-  width: 573px;
-  height: 68px;
+  max-width: 573px;
+  width: 100%;
+  min-height: 68px;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 22px;
   -moz-text-align-last: center;
@@ -73,22 +86,58 @@ header a {
 }
 
 .sect-two {
-  width: 864px;
-  height: 328px;
-  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .sect-two img {
-  padding-top: 45px;
+  width: 60%;
+  max-height: 328px;
+  height: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+.sect-two:hover {
+  opacity: 0.8;
 }
 
-@media screen and (max-width: 342px) {
-  ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+@media screen and (max-width: 400px) {
+  header {
+    margin-top: 19px;
+  }
+  header nav li {
+    display: none;
+  }
+  header nav .menu-icon {
+    display: block;
+  }
+
+  .sect-one {
+    margin-top: 0px;
+  }
+  .sect-one h1 {
+    font-size: 36px;
+  }
+  .sect-one p {
+    width: 217px;
+    height: 49px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .sect-two img {
+    width: 80%;
+    max-height: 284px;
+    position: relative;
+    top: 80px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .sect-two img {
+    width: 75%;
+    max-height: 512px;
   }
 }
